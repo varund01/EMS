@@ -1,0 +1,31 @@
+.article-layout{
+    margin-top:60px;
+}
+
+
+.article-block{
+
+}
+
+.card{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 2px solid white;
+    width:20%;
+    height:auto;
+    min-width: 350px;
+    margin:20px;
+
+}
+.card:hover{
+    transform: scale(1.01);
+}
+.card-image{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+}
+.card-text{
+    font-size: 20px;   
+}
