@@ -1,0 +1,65 @@
+
+
+.profile-image{
+    align-items: center;
+}
+
+  .image-styling{
+    border-radius: 50%;
+    width:300px;
+    height: 300px;
+    padding:30px;
+  }
+.contact-info{
+    text-align:left;
+    width:60vh;
+}
+.more-info{
+    width:50vh;
+}
+.sss a{
+    color:#ffff;
+    text-decoration: none;
+
+}
+
+.comp1-layout{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.profile-name{
+    text-align:center;
+}
+
+.sec a{
+    font-size: 1.5rem;
+    color:#ffff;
+    text-decoration: none;
+    margin: 20px 30px;
+}  
+
+.skill-list{
+    color:#ffff;
+    background-color: #121212;
+    border-radius: 20px;
+}
+.profile-details{
+    width:30%;
+    margin-top: 30px;
+    align-self: flex-start;
+}
+.about-section{
+    width: 70%;
+    margin-top:30px;
+}
+hr{
+    color:#ffff;
+    border-width: 2px;
+    background-color: white;
+}
+
+.para-style{
+    font-size:18px;
+}
