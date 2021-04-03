@@ -4,25 +4,27 @@ import Card from './components/profile/Card'
 import {Nav} from './components/nav'
 import {Index} from './components/home/Index'
 import {Articles} from './components/articles/Articles'
-import {Login} from './components/Login'
+import Login from './components/login/Login'
 import {Signup} from './components/Signup'
 import {FeedBack} from './components/FeedBack'
 
 import './App.css';
+import { NavRoute } from './NavRoute'
+import { LoginRoute } from './LoginRoute'
 
 function App() {
   return (
     <div className="App">
          <Router>
 
-      <Nav />  
+        
          <Switch>
-				<Route path="/" exact component={Index}/>
-				<Route path="/feedback" component={FeedBack}/>
-                <Route path="/articles" component={Articles}/>
-				<Route path="/login" component={Login}/>
-				<Route path="/signup" component={Signup}/>
-				<Route path="/profile" component={Card}/>		
+				<NavRoute path="/home" exact component={Index}/>
+				<NavRoute path="/feedback" component={FeedBack}/>
+                <NavRoute path="/articles" component={Articles}/>
+				<LoginRoute path="/login" component={Login}/>
+				<NavRoute path="/signup" component={Signup}/>
+				<NavRoute path="/profile" component={Card}/>		
 			</Switch>
       </Router>    
     </div>

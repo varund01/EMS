@@ -4,12 +4,15 @@ import {NavLink} from 'react-router-dom'
 
 import '../App.css'
 export const Nav = () => {
-    
+    const onLogoutHandler = () => {
+        localStorage.clear();
+        window.location.reload();
+    }
     return (
         <div className="navbar-styling">
 
             <ul className="w-75 nav-item d-flex flex-wrap justify-content-around">
-                <NavLink exact to="/" activeClassName="active">
+                <NavLink exact to="/home" activeClassName="active">
                     <li ><a href="#" s> Home  </a></li>
                 </NavLink>
                 <NavLink exact to="/articles" activeClassName="active">
@@ -18,15 +21,13 @@ export const Nav = () => {
                 <NavLink exact to="/feedback" activeClassName="active">
                     <li> <a href="#"> Feedback </a></li>
                 </NavLink>
-                <NavLink exact to="/login" activeClassName="active">
+                {/* <NavLink exact to="/login" activeClassName="active">
                     <li> <a href="#">Login</a> </li>
-                </NavLink>
-                <NavLink exact to="/signup" activeClassName="active">
-                <li style={{display:'block',float:'right'}}> <a href="#">Signup</a> </li>
-                </NavLink>
+                </NavLink> */}
                 <NavLink exact to="/profile" activeClassName="active">
                 <li> <a href="#">Profile</a> </li>
                 </NavLink>
+                <p className="logout" onClick={onLogoutHandler}>Logout</p>
             </ul>
         </div>
     )

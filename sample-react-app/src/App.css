@@ -24,3 +24,9 @@
   padding: 5px;
   border-bottom: 2px solid #ffff;
 }
+
+.logout {
+  cursor: pointer;
+  padding-top: 10px;
+  font-size: 25px;
+}
