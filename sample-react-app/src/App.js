@@ -1,33 +1,30 @@
 import React from 'react'
 import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
+
+
 import Card from './components/profile/Card'
-import {Nav} from './components/nav'
-import {Index} from './components/home/Index'
+import {Home} from './components/home/Home'
 import {Articles} from './components/articles/Articles'
 import Login from './components/login/Login'
-import {Signup} from './components/Signup'
 import {FeedBack} from './components/FeedBack'
 import {SingleArticle} from './components/articles/SingleArticle'
-import './App.css';
 import { NavRoute } from './NavRoute'
 import { LoginRoute } from './LoginRoute'
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-         <Router>
-
-        
-         <Switch>
-				<Route path="/" exact component={Index}/>
-				<Route path="/feedback" component={FeedBack}/>
-        <Route path="/articles" component={Articles}/>
-				<Route path="/login" component={Login}/>
-				<Route path="/signup" component={Signup}/>
-				<Route path="/profile" component={Card}/>	
-        
-				<Route path="/single/:id" component={SingleArticle}/>		
-			</Switch>
+      <Router>
+        <Switch>
+				  <NavRoute path="/home" exact component={Home}/>
+				  <NavRoute path="/feedback" component={FeedBack}/>
+          <NavRoute path="/articles" component={Articles}/>
+				  <LoginRoute path="/login" component={Login}/>
+				  <NavRoute path="/profile" component={Card}/>	
+				  <NavRoute path="/single/:id" component={SingleArticle}/>		
+			  </Switch>
       </Router>    
     </div>
   );

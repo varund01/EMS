@@ -11,7 +11,7 @@ const ImageSection = () => {
             <div className="profile-name mx-auto my-2 ">
                 <h3>A Vamsi Mudaliar</h3>
                 <h6 className="pt-3">Software Engineer-1 @ Sureify</h6>
-                
+
             </div>
             <div className="more-info p-4 ">
                 <h3>More Info :</h3><br></br>
@@ -30,4 +30,4 @@ const ImageSection = () => {
     )
 }
 
-export default ImageSection
+export default ImageSection 

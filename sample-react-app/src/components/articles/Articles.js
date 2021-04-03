@@ -29,7 +29,7 @@ export const Articles = () => {
                             </div>
                         </div>   
 
-                        <Link to={`/single/${ok}`}>
+                        <Link to={`/single/3`}>
                             <a href="#" className="btn btn-block btn-style btn-lg">Read More</a>
                         </Link>
                 </div>

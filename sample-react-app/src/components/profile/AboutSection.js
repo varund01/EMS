@@ -30,7 +30,7 @@ Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are 
 
             <button className="btn skill-list btn-style btn-lg m-3">Python</button>
                 </div></div>
-            
+
         </div>
     )
 }
