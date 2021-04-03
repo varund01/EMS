@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../../App.css'
 import './Articles.css'
 export const Articles = () => {
@@ -14,10 +15,14 @@ export const Articles = () => {
                         <img className="img img-reponsive card-image mx-auto my-3" src="https://picsum.photos/200/300?random=1"/>
 
                         <div className="card-content pb-3">
-                            <h3 className="text-center">First Blog Post</h3>
-                            <p className="card-text mt-4 pl-3">lkdlkfmlfmldmvlsdkmvsv</p>
-                        </div>            
-                        <button className="btn btn-style btn-lg">Read More</button>
+                            <div className="card-title d-flex flex-column">
+                                <h3 className="p-2 mr-auto">First Blog Post</h3>
+                                <h4 className="p-2">Posted on :<span> <small>25 Feb,2004</small></span></h4>
+                            </div>
+                        </div>    
+                        <Link exact to="/articles/3">
+                            <a href="#" className="btn btn-block btn-style btn-lg">Read More</a>
+                        </Link>
                 </div>
               </div>
         </div>
