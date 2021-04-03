@@ -7,7 +7,7 @@ import {Articles} from './components/articles/Articles'
 import {Login} from './components/Login'
 import {Signup} from './components/Signup'
 import {FeedBack} from './components/FeedBack'
-
+import {SingleArticle} from './components/articles/SingleArticle'
 import './App.css';
 
 function App() {
@@ -19,10 +19,12 @@ function App() {
          <Switch>
 				<Route path="/" exact component={Index}/>
 				<Route path="/feedback" component={FeedBack}/>
-                <Route path="/articles" component={Articles}/>
+        <Route path="/articles" component={Articles}/>
 				<Route path="/login" component={Login}/>
 				<Route path="/signup" component={Signup}/>
-				<Route path="/profile" component={Card}/>		
+				<Route path="/profile" component={Card}/>	
+        
+				<Route path="/single/:id" component={SingleArticle}/>		
 			</Switch>
       </Router>    
     </div>

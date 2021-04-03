@@ -1,12 +1,28 @@
 .article-layout{
     margin-top:60px;
+    
 }
-
-
-.article-block{
+.article-title{
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+}
+.single-article{
+    width:75%;
+    min-width: 50%;
+    border:2px solid #ffff;
+}
+.article-img{
+    width:100%;
+    height: 600px;
+    max-width: 800px;
+    border: 2px solid white
+}
+.article-text{
+    padding:30px;
+    font-size: 23px;
+    text-align: justify;
 
 }
-
 .card{
     background: #232526;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
@@ -18,6 +34,10 @@
     margin:20px;
 
 }
+.comment-area{
+    font-size: 23px;
+}
+
 .card:hover{
     transform: scale(1.01);
 }

@@ -19,6 +19,7 @@
   color:#ffff;
   background-color: #121212;
   font-weight:bold;
+  border:2px solid white;
 }
 .active{
   padding: 5px;

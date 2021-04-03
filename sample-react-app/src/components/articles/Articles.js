@@ -1,11 +1,14 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import '../../App.css'
 import './Articles.css'
+import { SingleArticle } from './SingleArticle'
 export const Articles = () => {
+    const [ok,setok] = useState(3)
     return (
-        <div className="">
-
+        <div>
+            
             <div className="article-layout d-flex flex-lg-row 
             flex-sm-column align-items-sm-center flex-wrap justify-content-space-between">
                 
@@ -19,8 +22,9 @@ export const Articles = () => {
                                 <h3 className="p-2 mr-auto">First Blog Post</h3>
                                 <h4 className="p-2">Posted on :<span> <small>25 Feb,2004</small></span></h4>
                             </div>
-                        </div>    
-                        <Link exact to="/articles/3">
+                        </div>   
+
+                        <Link to={`/single/${ok}`}>
                             <a href="#" className="btn btn-block btn-style btn-lg">Read More</a>
                         </Link>
                 </div>
