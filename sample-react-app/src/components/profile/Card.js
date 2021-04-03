@@ -27,7 +27,7 @@ const Card = () => {
         seta(a?a:!a);
         setb(false);
     }
-
+    console.log("Hello")
     return (
         <div className="container ">
         <ImageSection />
