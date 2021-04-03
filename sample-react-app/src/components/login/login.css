@@ -1,0 +1,11 @@
+@media all and (min-width: 480px) {
+    .login {
+        padding: 60px;
+        margin: 0 auto;
+        max-width: 40%;
+    }
+    .login__header {
+        display: flex;
+        justify-content: center;
+    }
+  }

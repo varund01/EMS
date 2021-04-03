@@ -6,12 +6,15 @@ import AboutSection from './AboutSection'
 import Employee_Intro from './Employee_Intro'
 
 import './profile.css'
+import { useHistory } from 'react-router-dom'
 
 const Card = () => {
 
     const [a,seta]  = useState(false);
     const [b,setb] = useState(true);
     
+    const history = useHistory();
+
     const solve_intro = ()=>{
         setb(b?b:!b);
         seta(false);
@@ -20,6 +23,10 @@ const Card = () => {
     const solve_port = ()=>{
         seta(a?a:!a);
         setb(false);
+    }
+
+    if (!(localStorage.getItem("email"))) {
+        history.push("/login");
     }
 
     return (

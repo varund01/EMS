@@ -4,18 +4,20 @@ import Card from './components/profile/Card'
 import {Nav} from './components/nav'
 import {Index} from './components/home/Index'
 import {Articles} from './components/articles/Articles'
-import {Login} from './components/Login'
+import Login from './components/login/Login'
 import {Signup} from './components/Signup'
 import {FeedBack} from './components/FeedBack'
 import {SingleArticle} from './components/articles/SingleArticle'
 import './App.css';
+import { NavRoute } from './NavRoute'
+import { LoginRoute } from './LoginRoute'
 
 function App() {
   return (
     <div className="App">
          <Router>
 
-      <Nav />  
+        
          <Switch>
 				<Route path="/" exact component={Index}/>
 				<Route path="/feedback" component={FeedBack}/>

@@ -1,12 +1,17 @@
 import React,{useState,useEffect} from 'react'
 import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 import {Link} from 'react-router-dom'
 import '../../App.css'
 import './Articles.css'
 import { SingleArticle } from './SingleArticle'
+
 export const Articles = () => {
-    const [ok,setok] = useState(3)
-    return (
+    const history = useHistory();
+    if (!(localStorage.getItem("email"))) {
+        history.push("/login");
+    }    
+  return (
         <div>
             
             <div className="article-layout d-flex flex-lg-row 
