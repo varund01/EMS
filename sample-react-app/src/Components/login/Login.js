@@ -1,10 +1,9 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'; 
-import {Button} from "@material-ui/core" ;
+//import {Button} from "@material-ui/core" ;
 import App from "../../App"
 import "./login.css"
-import { FeedBack } from '../FeedBack';
-
+import '../../App.css'
 function Login() {
 
     const initialState = {
@@ -55,7 +54,7 @@ function Login() {
                         />
                     </div>
                     <div>
-                        <Button variant="contained" color="primary" type="submit" name="signin">Sign In</Button>
+                        <button className="btn btn-success btn-block">Login</button>
                     </div>
                     <hr />
                 </form>

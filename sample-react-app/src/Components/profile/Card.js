@@ -1,10 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import { useHistory } from 'react-router-dom'
 
 import ImageSection from './ImageSection'
 import TotalCount from './TotalCount'
 import AboutSection from './AboutSection'
 import Employee_Intro from './Employee_Intro'
+
+import ProfileDataProvider from '../../Context/ProfileContext'
 
 import './profile.css'
 
@@ -27,10 +29,10 @@ const Card = () => {
         seta(a?a:!a);
         setb(false);
     }
-    console.log("Hello")
     return (
         <div className="container ">
-        <ImageSection />
+            <ProfileDataProvider>        
+            <ImageSection />
 
         <div className="contact-section ">
               <div className="nav nav-tabs d-flex mt-3 sec">
@@ -49,7 +51,7 @@ const Card = () => {
                 </> : <Employee_Intro />
             }
         </div>
-
+            </ProfileDataProvider>
         </div>
     )
 }

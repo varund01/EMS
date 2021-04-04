@@ -2,12 +2,12 @@ import React from 'react'
 import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
 
 
-import Card from './components/profile/Card'
-import {Home} from './components/home/Home'
-import {Articles} from './components/articles/Articles'
-import Login from './components/login/Login'
-import {FeedBack} from './components/FeedBack'
-import {SingleArticle} from './components/articles/SingleArticle'
+import Card from './Components/profile/Card'
+import {Home} from './Components/home/Home'
+import {Articles} from './Components/articles/Articles'
+import Login from './Components/login/Login'
+import {FeedBack} from './Components/FeedBack'
+import {SingleArticle} from './Components/articles/SingleArticle'
 import { NavRoute } from './NavRoute'
 import { LoginRoute } from './LoginRoute'
 

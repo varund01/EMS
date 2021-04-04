@@ -12,7 +12,10 @@ export const Nav = () => {
         <div className="navbar-styling">
 
             <ul className="w-75 nav-item d-flex flex-wrap justify-content-around">
+                <li><img src="sureify_logo.ico" className="logo" ></img><span>Sureify</span></li>
+                
                 <NavLink exact to="/home" activeClassName="active">
+                    
                     <li ><a href="#" s> Home  </a></li>
                 </NavLink>
                 <NavLink exact to="/articles" activeClassName="active">

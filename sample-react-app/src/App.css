@@ -31,3 +31,17 @@
   padding-top: 10px;
   font-size: 25px;
 }
+.btn-success{
+  background-color: #4EAF31;
+}
+
+.btn-success:hover{
+  background-color: #4EAF31;
+  color: #ffff;
+transform:scale(1.01);
+}
+
+.logo{
+  height:50px;
+  width:50px;
+}

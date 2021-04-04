@@ -2,18 +2,21 @@ import React,{useState,useEffect} from 'react'
 import {BrowserRouter as Router ,Route,Switch} from 'react-router-dom'
 import { useHistory } from 'react-router-dom';
 import {Link} from 'react-router-dom'
+
 import '../../App.css'
 import './Articles.css'
-import { SingleArticle } from './SingleArticle'
+
 
 export const Articles = () => {
     const history = useHistory();
     if (!(localStorage.getItem("email"))) {
         history.push("/login");
     }    
+
+
+
   return (
         <div>
-            
             <div className="article-layout d-flex flex-lg-row 
             flex-sm-column align-items-sm-center flex-wrap justify-content-space-between">
                 
@@ -28,10 +31,11 @@ export const Articles = () => {
                                 <h4 className="p-2">Posted on :<span> <small>25 Feb,2004</small></span></h4>
                             </div>
                         </div>   
-
+                        <div className="p-3">
                         <Link to={`/single/3`}>
-                            <a href="#" className="btn btn-block btn-style btn-lg">Read More</a>
+                            <button className="btn btn-block btn-success btn-lg">Read More</button>
                         </Link>
+                        </div>
                 </div>
               </div>
         </div>
