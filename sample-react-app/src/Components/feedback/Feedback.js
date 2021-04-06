@@ -1,12 +1,17 @@
 import React, { useState } from "react"
 import "./feedback.css"
 import RangeSlider from "./RangeSlider";
+import { useHistory } from 'react-router-dom';
 
 const Feedback=()=>{
     const [state, setstate] = useState({belief:0,opportunities:0,happiness:0,balance:0,processes:0,administration:0,communication:0,trust:0,engagement_culture:0,work_from_home:0,lead_guidance:0,your_effort:0,referal:0,circumstances:'',suggestions:''})
     const submitHandler=(e)=>{
         e.preventDefault()
         console.log(state)
+    }
+    const history = useHistory();
+    if (!(localStorage.getItem("email"))) {
+        history.push("/login");
     }
     return(
         <div className="container">
