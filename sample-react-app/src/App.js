@@ -6,7 +6,7 @@ import Card from './Components/profile/Card'
 import {Home} from './Components/home/Home'
 import {Articles} from './Components/articles/Articles'
 import Login from './Components/login/Login'
-import {FeedBack} from './Components/FeedBack'
+import Feedback from './Components/feedback/Feedback'
 import {SingleArticle} from './Components/articles/SingleArticle'
 import { NavRoute } from './NavRoute'
 import { LoginRoute } from './LoginRoute'
@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Switch>
 				  <NavRoute path="/home" exact component={Home}/>
-				  <NavRoute path="/feedback" component={FeedBack}/>
+				  <NavRoute path="/feedback" component={Feedback}/>
           <NavRoute path="/articles" component={Articles}/>
 				  <LoginRoute path="/login" component={Login}/>
 				  <NavRoute path="/profile" component={Card}/>	
