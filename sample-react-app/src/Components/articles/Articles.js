@@ -25,10 +25,11 @@ export const Articles = () => {
 
                         <img className="img img-reponsive card-image mx-auto my-3" src="https://picsum.photos/200/300?random=1"/>
 
-                        <div className="card-content pb-3">
+                        <div className="card-content ">
                             <div className="card-title d-flex flex-column">
-                                <h3 className="p-2 mr-auto">First Blog Post</h3>
-                                <h4 className="p-2">Posted on :<span> <small>25 Feb,2004</small></span></h4>
+                                <h3 className="pl-2  mr-auto">First Blog Post</h3>
+                                <p className="pl-2">Posted on :<span> <small>25 Feb,2004</small></span></p>
+                                <p className="pl-2">Posted by :<span> <small>Admin</small></span></p>
                             </div>
                         </div>   
                         <div className="p-3">
@@ -37,6 +38,10 @@ export const Articles = () => {
                         </Link>
                         </div>
                 </div>
+
+                
+
+
               </div>
         </div>
     )

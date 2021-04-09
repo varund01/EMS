@@ -21,22 +21,22 @@ const muiTheme = createMuiTheme({
     MuiSlider: {
         
         thumb:{
-            color: "white",
+            color:  "#4EAF31",
         },
         track: {
-            color: 'white'
+            color:  "#4EAF31"
         },
         rail: {
-            color: 'white'
+            color: ' #4EAF31'
         },
         markLabel:{
-            color:"white"
+            color:" #4EAF31"
         },
         valueLabel:{
-            color:'black'
+            color:' #4EAF31'
         },
         markLabelActive:{
-            color:'white'
+            color:' #4EAF31'
         },
     }
 }

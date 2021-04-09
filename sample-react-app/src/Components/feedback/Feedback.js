@@ -3,6 +3,8 @@ import "./feedback.css"
 import RangeSlider from "./RangeSlider";
 import { useHistory } from 'react-router-dom';
 
+import '../../App.css'
+
 const Feedback=()=>{
     const [state, setstate] = useState({belief:0,opportunities:0,happiness:0,balance:0,processes:0,administration:0,communication:0,trust:0,engagement_culture:0,work_from_home:0,lead_guidance:0,your_effort:0,referal:0,circumstances:'',suggestions:''})
     const submitHandler=(e)=>{
@@ -14,7 +16,7 @@ const Feedback=()=>{
         history.push("/login");
     }
     return(
-        <div className="container">
+        <div className="container shadow p-3">
             <form onSubmit={submitHandler}>
                 <div className="heading">
                     <h1 className="center mt-5">Employee Feedback Survey</h1>
@@ -51,7 +53,7 @@ const Feedback=()=>{
                     <input id="circumstances" type="text" placeholder="Your answer" onChange={e=>setstate({...state,circumstances:e.target.value})} required />
                     <h4>Overall Suggestions/Improvements</h4>
                     <input id="suggestions" type="text" placeholder="Your answer" onChange={e=>setstate({...state,suggestions:e.target.value})} required/>
-                    <button type="submit">Submit</button>
+                    <button type="submit btn-success" className="btn ">Submit</button>
                 </div>
             </form>
         </div>
