@@ -10,7 +10,7 @@ function SingleComment({text,username}) {
     
     return (
         <>
-          <div className="mt-3 comment-card d-flex ">
+          <div className="mt-3 shadow-sm comment-card d-flex ">
                 <div className="w-20">
                     <img src="https://picsum.photos/200/300?random=5" className="img img-responsive comment-img"></img>
                 </div>

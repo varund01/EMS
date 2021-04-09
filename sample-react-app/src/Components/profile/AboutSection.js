@@ -4,7 +4,7 @@ import '../../App.css'
 
 const AboutSection = () => {
     return (
-        <div className="p-4 comp1-layout about-section">
+        <div className="p-4 shadow-sm about-section">
             <div className="about-para">            
             <h4>About</h4>
             <hr></hr><br></br>

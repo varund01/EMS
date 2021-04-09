@@ -7,7 +7,7 @@ import {ArticleComments} from './ArticleComments'
 export const SingleArticle = () => {
     console.log("Hello")
     return (
-        <div className="d-flex article-layout container flex-column  single-article">
+        <div className="d-flex shadow article-layout container flex-column  single-article">
               <img className="img img-reponsive article-img mx-auto my-3" src="https://picsum.photos/200/300?random=1"/>
                 <div className="w-50 mx-auto article-title">
                 <h3 className="p-2 text-center">Blog Title</h3> 
