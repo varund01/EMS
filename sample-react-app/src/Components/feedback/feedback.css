@@ -1,0 +1,30 @@
+.survey{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+.container{
+    margin-top: 10px;
+}
+input{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+textarea{
+    width:100%;
+    font-size: 20px;
+}
+.heading{
+    margin-top: 50px;
+    text-align: center;
+}
+button{
+    margin-top: 9px;
+    width:200px;
+    height:50px;
+    font-size: 20px;
+}
+h4{
+    margin-top: 30px;
+}

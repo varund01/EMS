@@ -1,0 +1,66 @@
+
+
+.profile-image{
+    align-items: center;
+}
+
+  .image-styling{
+    border-radius: 50%;
+    width:300px;
+    height: 300px;
+    padding:30px;
+  }
+.contact-info{
+    text-align:left;
+    width:60vh;
+}
+.more-info{
+    width:50vh;
+}
+.sss a{
+    color:#ffff;
+    text-decoration: none;
+
+}
+
+.comp1-layout{
+    background-color: #dadee3;
+}
+.profile-name{
+    text-align:center;
+}
+
+.sec a{
+    font-size: 1.5rem;
+    color:black;
+    text-decoration: none;
+    margin: 20px 30px;
+}  
+
+.skill-list{
+    color:#ffff;
+    background-color: #121212;
+    border-radius: 20px;
+}
+.profile-details{
+    width:30%;
+    margin-top: 30px;
+    align-self: flex-start;
+}
+.about-section{
+    width: 70%;
+    margin-top:30px;
+}
+hr{
+    color:#ffff;
+    border-width: 2px;
+    background-color: white;
+}
+
+.para-style{
+    font-size:18px;
+}
+
+.profile__link {
+    cursor: pointer;
+}
