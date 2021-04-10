@@ -9,6 +9,7 @@ import Employee_Intro from './Employee_Intro'
 import ProfileDataProvider from '../../Context/ProfileContext'
 
 import './profile.css'
+import CreateProfile from './CreateProfile'
 
 const Card = () => {
 
@@ -19,6 +20,7 @@ const Card = () => {
 
     const [a,seta]  = useState(false);
     const [b,setb] = useState(true);
+    const [cp,setcp] = useState(true);
 
     const solve_intro = ()=>{
         setb(b?b:!b);
@@ -45,10 +47,11 @@ const Card = () => {
         <div className="d-flex justify-content-center flex-wrap">
             {
             (!b)?
+                (cp?
                 <>
                 <TotalCount />
                 <AboutSection />
-                </> : <Employee_Intro />
+                </>:<CreateProfile/>) : <Employee_Intro />
             }
         </div>
             </ProfileDataProvider>

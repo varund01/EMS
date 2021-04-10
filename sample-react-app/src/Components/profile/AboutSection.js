@@ -4,7 +4,7 @@ import '../../App.css'
 
 const AboutSection = () => {
     return (
-        <div className="p-4 shadow-sm about-section">
+        <div className="p-4 shadow about-section">
             <div className="about-para">            
             <h4>About</h4>
             <hr></hr><br></br>
@@ -22,13 +22,13 @@ Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are 
             <h4>Skills</h4> <hr /> <br />
 
             <div className=" d-flex flex-wrap">
-            <button className="btn skill-list btn-style btn-lg m-3">C</button>
+            <button className="btn skill-list btn-style btn-sm m-3">C</button>
 
-            <button className="btn skill-list btn-style btn-lg m-3 ">C++</button>
+            <button className="btn skill-list btn-style btn-sm m-3 ">C++</button>
 
-            <button className="btn skill-list btn-style btn-lg m-3">Java</button>
+            <button className="btn skill-list btn-style btn-sm m-3">Java</button>
 
-            <button className="btn skill-list btn-style btn-lg m-3">Python</button>
+            <button className="btn skill-list btn-style btn-sm m-3">Python</button>
                 </div></div>
 
         </div>

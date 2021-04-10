@@ -53,7 +53,7 @@ const Feedback=()=>{
                     <input id="circumstances" type="text" placeholder="Your answer" onChange={e=>setstate({...state,circumstances:e.target.value})} required />
                     <h4>Overall Suggestions/Improvements</h4>
                     <input id="suggestions" type="text" placeholder="Your answer" onChange={e=>setstate({...state,suggestions:e.target.value})} required/>
-                    <button type="submit btn-success" className="btn ">Submit</button>
+                    <button type="submit" className="btn btn-success p-2">Submit</button>
                 </div>
             </form>
         </div>

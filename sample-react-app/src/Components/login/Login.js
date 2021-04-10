@@ -54,7 +54,7 @@ function Login() {
                         />
                     </div>
                     <div>
-                        <button className="btn btn-success btn-block">Login</button>
+                        <button className="btn btn-success">Login</button>
                     </div>
                     <hr />
                 </form>

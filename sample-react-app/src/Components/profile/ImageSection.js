@@ -4,7 +4,7 @@ import '../../App.css'
 
 const ImageSection = () => {
     return (
-        <div className="shadow mt-4 d-flex flex-lg-row flex-md-column align-items-center flex-sm-column flex-wrap comp1-layout">
+        <div className=" mt-4 d-flex flex-lg-row flex-md-column align-items-center flex-sm-column flex-wrap comp1-layout">
             <div className="profile-image">
                 <img src="https://picsum.photos/200/300?random=2" className="image-styling"/>
             </div>
@@ -25,7 +25,6 @@ const ImageSection = () => {
                     <a href="#" className="fab fa-2x fa-linkedin px-2" ></a>
                 </div>
             </div> 
-
         </div>
     )
 }
