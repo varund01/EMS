@@ -26,16 +26,40 @@ conn.connect((err)=>{
 router.get('/view/',(req,res)=>{
     let sql = `SELECT * FROM Employee`
     
-    let query = conn.query(sql,[],(err,result)=>{
+    let query = conn.query(sql,(err,result)=>{
         if(err) throw err
+        
+        var temp = []
+        const total_rows = result.length
 
-        res.send(JSON.stringify({
-            status:200,
-            error:null,
-            response: result
-        }))
+        result.forEach((element,idx) => {
+           
+            let poi = `SELECT skill_name from Skills WHERE emp_id=${element["emp_id"]}`
+           
+           let bg = conn.query(poi,(err,skillset)=>{
+                    let temp_skills =[];
 
-        console.log("Data Displayed ")
+                    skillset.forEach(elem=> temp_skills.push(elem.skill_name))
+                    
+                    element["skills"] = temp_skills
+                    
+                    temp.push(element)
+
+                    // if this is the last row then send the output the JSON
+                    if(idx==total_rows-1){
+                            
+                        res.send(JSON.stringify({
+                            status:200,
+                            error:null,
+                            response: temp
+                        }))
+                        console.log("Data Displayed ")
+                        return;
+                    }
+           })
+
+        });
+
     })
 })
 
@@ -44,16 +68,28 @@ router.get('/view/',(req,res)=>{
 router.get('/view/:id/',(req,res)=>{
     let sql = `SELECT * FROM Employee WHERE emp_id=${req.params.id}`
     
-    let query = conn.query(sql,[],(err,result)=>{
+    let query = conn.query(sql,(err,result)=>{
         if(err) throw err
 
-        res.send(JSON.stringify({
-            status:200,
-            error:null,
-            response: result
-        }))
+        let poi = `SELECT skill_name from Skills WHERE emp_id=${result[0]["emp_id"]}`
+         
+        let rd = conn.query(poi,(err,skillset)=>{
+            
+            let temp_skills =[];
 
-        console.log("Data Displayed...")
+            skillset.forEach(elem=> temp_skills.push(elem["skill_name"]))
+                
+            result[0]["skills"]=temp_skills
+
+            res.send(JSON.stringify({
+                status:200,
+                error:null,
+                response: result
+            }))
+
+            console.log("Single Data Displayed...")
+        })
+
     })
 })
 // create Profile
@@ -122,5 +158,38 @@ router.delete('/delete/:id/',(req,res)=>{
     })
 })
 
+// SKILL APIs
+
+router.post('/skill/add/',(req,res)=>{
+    const data = {
+        skill_name:req.body.skill,
+        emp_id:req.body.emp_id
+    }
+    
+    let sql = `INSERT INTO Skills SET ?`
+
+    let pg = conn.query(sql,data,(err,result)=>{
+        if(err) throw err
+        res.send(JSON.stringify({
+            status:200,
+            error:null,
+            response:"New Skill Added Successfully"
+        }))
+    })
+})
+
+router.post('/skill/delete/:id',(req,res)=>{
+    
+    let sql = `DELETE FROM Skills WHERE skill_id=${req.params.id}`
+
+    let pg = conn.query(sql,data,(err,result)=>{
+        if(err) throw err
+        res.send(JSON.stringify({
+            status:200,
+            error:null,
+            response:"Skill DELETED Successfully"
+        }))
+    })
+})
 
 module.exports = router
