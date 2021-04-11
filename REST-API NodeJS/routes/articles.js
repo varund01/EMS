@@ -16,7 +16,7 @@ const conn = mysql.createConnection({
 conn.connect((err)=>{
     if(err)
         throw (err)
-    console.log("Database Connected");
+    console.log("Article API ----- CONNECTION OK");
 })
 // connection part ends
 

@@ -16,7 +16,7 @@ const conn = mysql.createConnection({
 conn.connect((err)=>{
     if(err)
         throw (err)
-    console.log("Database Connected");
+    console.log("Profile API ------ CONNECTION OK");
 })
 
 // connection ends
