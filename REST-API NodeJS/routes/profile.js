@@ -2,7 +2,6 @@ const express = require('express')
 const mysql = require('mysql')
 let router = express.Router()
 
-
 // connection part starts 
 
 const conn = mysql.createConnection({
@@ -193,3 +192,4 @@ router.post('/skill/delete/:id',(req,res)=>{
 })
 
 module.exports = router
+

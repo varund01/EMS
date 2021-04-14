@@ -67,11 +67,11 @@ router.post('/login',(req,res)=>{
                 }
 
                 // create a JWT     
-                jwt.sign(user,'Vampire',{expiresIn:'1day'},(err,token)=>{
+                jwt.sign(user,'Vampire',{expiresIn:'1d'},(err,token)=>{
                     res.json(
                         {
                             token
-                        }
+                        } 
                     )
                 })
             } else {
@@ -83,4 +83,11 @@ router.post('/login',(req,res)=>{
     })
 })
 
-module.exports = router
+
+const test = ()=> console.log("Hello World")
+
+
+
+module.exports = {
+    router
+} 
