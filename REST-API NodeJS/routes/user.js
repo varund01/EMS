@@ -84,10 +84,4 @@ router.post('/login',(req,res)=>{
 })
 
 
-const test = ()=> console.log("Hello World")
-
-
-
-module.exports = {
-    router
-} 
+module.exports = router 
